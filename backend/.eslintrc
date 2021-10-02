@@ -1,0 +1,39 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-typescript/base",
+    "prettier/@typescript-eslint",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["prettier", "jest"],
+  "rules": {
+    "prettier/prettier": "warn",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/forbid-prop-types": [0, { "forbid": ["any"] }],
+    "react/prop-types": 0,
+    "no-param-reassign": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "import/prefer-default-export": 0,
+    "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/class-methods-use-this": "off",
+    "class-methods-use-this": "off"
+  }
+}

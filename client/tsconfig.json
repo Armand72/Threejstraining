@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "rootDirs": ["src", "tests/unit"],
+    "baseUrl": "src",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "./dist"
+  },
+  "include": ["src", "src/**/*.tsx", "src/**/*.ts"],
+  "exclude": [
+    "src/serviceWorker.js",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/*/.spec.ts",
+    "src/*/.test.ts",
+    "dist/**/*",
+    "node_modules"
+  ],
+  "compileOnSave": false
+}

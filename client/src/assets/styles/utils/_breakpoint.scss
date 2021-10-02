@@ -1,0 +1,22 @@
+$largeScreen: 1140px;
+$screen: 960px;
+$tablet: 780px;
+$mobile: 540px;
+
+@mixin mq($from: false, $to: false) {
+  $media-query: "";
+
+  @if (type-of($from) == number or type-of($to) == number) {
+    @if (type-of($from) == number and type-of($to) == number) {
+      $media-query: "screen and (min-width:#{$from}) and (max-width:#{$to})";
+    } @else if type-of($from) == number {
+      $media-query: "screen and (min-width:#{$from})";
+    } @else {
+      $media-query: "screen and (max-width:#{$to})";
+    }
+  }
+
+  @media #{$media-query} {
+    @content;
+  }
+}
